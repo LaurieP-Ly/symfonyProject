@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<header class="index">
+<div>
+
+<h1> Sport Escape </h1>
+
+<ul> 
+
+<li> <a href="{{ path('home')}}"> Accueil </a> </li>
+<li> <a href="{{ path('AllSports')}}"> Voir les sports </a> </li>
+<li> <a href="{{ path('panier_index')}}">Votre panier</a> </li>
+{% if not app.user %}
+<li> <a href="{{ path('security_login')}}">  Se connecter  </a> </li>
+ <li><a href="{{ path('security_registration')}}">  Creer un compte </a> </li> 
+{% else %}
+<li> <a href="{{ path('profil', {'idUser': app.user.id } )}}">Votre profil</a> </li>
+<li> <a href="{{ path('security_logout')}}"> Se deconnecter  </a> </li>
+{% endif %}
+</ul>
+ </div>
+
+
+</header>
+
+<div class="imagesSilhouette1"> 
+    <img src="{{ asset( 'img/volleyball-310770_640.png' )}}" alt="sport" class="imgVolley">
+</div>
+
+    <section class=" principale">
+
+        <div class="info">
+
+        Tous nos cours sont à 30 €, profitez d'une activité sportive dans une ambiance chaleureuse ! 
+
+
+           
+
+        </div>
+
+    </section>
+<div class="imagesSilhouette2"> 
+    <img src="{{ asset( 'img/volleyball-310328_640.png ' )}}" alt="sport" >
+</div>
+    
+
+
+
+    <footer> 
+        <p> Ce site est un projet purement personnel d'entrainement au framework Symfony </p>
+        <p> This is a fully personnal project made for training the Symfony framework</p>
+         <a href="{{ path('admin')}}">  Administration  </a>
+
+    </footer>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,380 @@
+
+
+/*********Pour toutes les pages***********/
+
+h1{
+    color: #bf470f;
+    text-align: left;
+    font-size: 5rem;
+    padding: 5rem;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+footer{
+    padding:2rem;
+    background-color: #bf470f;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: #ccceff;
+}
+
+footer>a{
+    
+    color: #ccceff;
+}
+
+
+/***********Pour l'index**************/
+
+.principale{
+    margin: 2rem;
+    padding: 8rem;
+    background-color: #ccceff;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+
+
+.imagesSilhouette1{
+    text-align: center;
+
+}
+
+.imagesSilhouette1>img{
+    width: 10%;
+    padding: 5rem;
+}
+
+.imagesSilhouette2{
+    text-align: center;
+
+}
+
+.imagesSilhouette2>img{
+    width: 15%;
+    padding: 5rem;
+}
+
+/*******Header pour l'index**********/
+
+.index{
+    padding: 7rem;
+    text-align: center;
+    background-image: url("../img/running-4782722_1920.jpg");
+    background-position-x: 35%;
+    background-position-y: 40%;
+}
+
+.index>div>ul>li>a{
+
+    color: #ccceff;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+}
+
+
+.index>div>ul>li{
+    padding: 1rem;
+    background-color: #bf470f;
+}
+
+
+
+.index>div{
+    background-color: #94949b5e;
+    padding: 7rem;
+}
+
+
+.index>div>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    
+}
+
+/*******Header pour page secondaire**********/
+
+.secondary{
+
+    text-align: center;
+    background-image: url("../img/running-4782722_1920.jpg");
+    background-position-x: 35%;
+    background-position-y: 40%;
+
+}
+
+.secondary>div>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    
+}
+
+
+.secondary>div>ul>li>a{
+
+    color: #ccceff;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+}
+
+.secondary>div>ul>li{
+    padding: 1rem;
+    background-color: #bf470f;
+}
+
+
+.secondary>div{
+    background-color: #94949b5e;
+    padding: 1rem;
+}
+
+
+
+/******Page des sports******/
+
+
+.listesSports>ul{
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+
+.listesSports>ul>li{
+    background-color: #ccceff; 
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    margin: 2rem;
+}
+
+.listesSports>ul>li>a{
+    color: #bf470f;
+}
+
+.listesSports>ul>li>a>h2{
+    font-size: 2rem;
+    color: #bf470f;
+}
+
+
+.sport{
+    width: 60%;
+    border-radius: 40%;
+}
+
+/************Page planning**************/
+
+
+.planning{
+    font-size: 2rem;
+    color: #bf470f;
+}
+
+.arrow{
+    font-size: 2.5rem;
+    color: #6b6866;
+    padding: 1rem;
+    margin: 3rem;
+    border-radius: 70%;
+}
+
+.description{
+    font-size: 1.5rem;
+    color: #6b6866;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imagePlanning{
+    width: 50%;
+}
+
+.sectionPlanning>div{
+    text-align: center;
+}
+
+.sectionPlanning{
+    margin: 6rem;
+    background-color: #ccceff; 
+    box-shadow: 60px -16px #bf470fd5;
+}
+
+.horaires{
+    padding: 3rem;
+    list-style: none;
+}
+
+.horaires>ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.horaires>ul>li{
+    color: #6b6866;
+}
+
+
+.buttonPlanning{
+background-color: #bf470f;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.buttonPlanning>a{
+
+  color: #ccceff;
+
+}
+
+
+
+/**********Page panier *************/
+
+
+.panier_vide{
+    margin: 3rem;
+    background-color: #ccceff;
+    text-align: center;
+    padding: 5rem;
+}
+
+.panier_vide>img{
+    width: 20%;
+}
+
+
+.panier_plein{
+    margin: 5rem;
+}
+
+.panier_plein>table{
+
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.panier_plein>table>thead, tbody>tr>th, td{
+
+    text-align: left;
+    padding: 8px;
+
+}
+
+
+tr:nth-child(even) {background-color: #ccceff;}
+
+
+.cartLink{
+
+    color: #bf470f;
+
+}
+
+.panier{
+
+
+    font-size: 2rem;
+    color: #bf470f;
+
+}
+
+/************Profil******************/
+
+.profil{
+
+    color: #bf470f;
+    margin: 3rem;
+
+}
+
+/***************Registration et login*********************/
+
+
+.divForm{
+    margin: 3rem;
+    color: #bf470f;
+    display: flex;
+    flex-direction: column;
+}
+
+.divForm>input{
+    width: 20%;
+}
+
+
+.titreRegistrationLogin{
+
+
+    font-size: 2rem;
+    color: #bf470f;
+
+
+}
+
+
+.registrationLoginButton{
+    background-color: #bf470f;
+    color: #ccceff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    margin: 3rem;
+}
+
+.sectionForm{
+    margin-left: 40%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.RLLink{
+
+    color: #bf470f;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

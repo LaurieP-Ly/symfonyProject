@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Validation{% endblock %}
+
+{% block body %}
+
+<header class="secondary">
+<div>
+
+<h1> Sport Escape </h1>
+
+<ul> 
+
+<li> <a href="{{ path('home')}}"> Accueil </a> </li>
+<li> <a href="{{ path('AllSports')}}"> Voir les sports </a> </li>
+<li> <a href="{{ path('panier_index')}}">Votre panier</a> </li>
+{% if not app.user %}
+<li> <a href="{{ path('security_login')}}">  Se connecter  </a> </li>
+ <li><a href="{{ path('security_registration')}}">  Creer un compte </a> </li> 
+{% else %}
+<li> <a href="{{ path('profil', {'idUser': app.user.id } )}}">Votre profil</a> </li>
+<li> <a href="{{ path('security_logout')}}"> Se deconnecter  </a> </li>
+{% endif %}
+</ul>
+ </div>
+
+
+</header>
+
+{% if not app.user %}
+<p> Vous devez être connecté pour avoir accés à cette page  <a href="{{ path('security_login')}}">  Se connecter  </a> </p>
+{% else %}
+
+
+
+<h2 class="panier"> Validation </h2>
+        <div  class="panier_plein">
+
+        {% if items | length > 0 %}
+
+        <table>
+    <thead>
+        <tr>
+            <th>Sport</th>
+            <th>Jour</th>
+            <th>Heure</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.horaire.idSport}} </td>
+                <td>{{ item.horaire.jour}}</td>
+                <td>{{ item.horaire.heure}}</td>
+            </tr>
+        {%endfor%}
+    </tbody>
+
+    <td>Total : {{ prixTotal }} € </td>
+    <td><a href="{{ path ('panier_validation', {idUser: app.user.id, prixTotal: prixTotal })}}"  class="cartLink" >Tout valider ( simulation de paiement ) </a></td>
+</table>
+
+</div>
+
+
+        {% else %}
+        <section class="panier_vide"> 
+        <p> Vous ne pouvez pas effectuer cette action car votre panier est vide </p>
+        <a href="{{ path ('home')}}"  class="cartLink"> Retour ( simulation de paiement ) </a>
+
+        </section>
+
+        {% endif %}
+           
+
+        
+
+
+
+    <footer> 
+        <p> Ce site est un projet purement personnel d'entrainement au framework Symfony </p>
+        <p> This is a fully personnal project made for training the Symfony framework</p>
+         <a href="{{ path('admin')}}">  Administration  </a>
+
+    </footer>
+
+
+
+
+{% endif %}
+{% endblock %}
+
+
+

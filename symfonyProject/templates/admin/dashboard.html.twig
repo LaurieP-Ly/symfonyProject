@@ -1,0 +1,129 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Administrateur' %}
+
+{% block page_content %}
+
+    <div class="container">
+    <h2> Espace Administrateur </h2>
+
+    <h3> Sports </h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Lien images</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                {% for sport in sports %}
+                <tr>
+                    <td>{{ sport.id}}</td>
+                    <td>{{ sport.nom}}</td>
+                    <td>{{ sport.description}}</td>
+                    <td>{{ sport.img}}</td>
+                </tr>
+                {%endfor%}
+       
+            </tbody>
+        </table>
+
+    <h3> Horaires </h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Sport</th>
+                    <th>Heure</th>
+                    <th>Jour</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                {% for horaire in horaires %}
+                <tr>
+                    <td>{{ horaire.id}}</td>
+                    <td>{{ horaire.idSport}}</td>
+                    <td>{{ horaire.Heure}}</td>
+                    <td>{{ horaire.Jour}}</td>
+                </tr>
+                {%endfor%}
+       
+            </tbody>
+        </table>
+
+    <h3> Commandes </h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Prix total</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                {% for commande in commandes %}
+                <tr>
+                    <td>{{ commande.id}}</td>
+                    <td>{{ commande.date}}</td>
+                    <td>{{ commande.Prix}} € </td>
+                </tr>
+                {%endfor%}
+       
+            </tbody>
+        </table>
+
+    <h3> Reservations </h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Horaire</th>
+                    <th>Commande</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                {% for reservation in reservations %}
+                <tr>
+                    <td>{{ reservation.id}}</td>
+                    <td>{{ reservation.idHoraire}}</td>
+                    <td>{{ reservation.idCommande}}</td>
+                </tr>
+                {%endfor%}
+       
+            </tbody>
+        </table>
+    <h3> Users </h3>
+
+       <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id}}</td>
+                    <td>{{ user.username}}</td>
+                </tr>
+                {%endfor%}
+       
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}
